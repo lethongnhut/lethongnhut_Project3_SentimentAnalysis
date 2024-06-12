@@ -286,7 +286,7 @@ elif choice == 'Xây dựng mô hình':
     # show accuracy as percentage with 2 decimal places
     st.write(f'{accuracy_score(y_test, y_pred) * 100:.2f}%')
 #----------------------------------------------------------------------------------------------------    
-elif choice == 'Dự đoán mới':
+elif choice == 'Dự đoán':
 #----------------------------------------------------------------------------------------------------
     st.subheader('Dự đoán mới')
     st.write('''
