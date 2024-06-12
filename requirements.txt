@@ -11,4 +11,4 @@ gtts
 pyaudio
 speechrecognition
 maturin
-sudo apt-get install libportaudio2
+
