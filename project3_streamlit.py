@@ -135,24 +135,28 @@ def text_transform(comment):
 #----------------------------------------------------------------------------------------------------
 # Overview
 
-st.image('pictures/csc.jpg')
+st.image('download.jpg')
 
 st.title("Trung tâm tin học - ĐH KHTN")
-st.header('Data Science and Machine Learning Certificate')
-st.subheader('Sentiment analysis of Vietnamese comments on Shopee')
+st.header('Data Science')
+st.subheader('Sentiment Analysis on ShopeeFood')
 
 # st.video('https://www.youtube.com/watch?v=q3nSSZNOg38&list=PLFTWPHJsZXVVnckL0b3DYmHjjPiRB5mqX')
 
-menu = ['Tổng quan', 'Xây dựng mô hình', 'Dự đoán mới']
+menu = ['Tổng quan', 'Xây dựng mô hình', 'Dự đoán']
 choice = st.sidebar.selectbox('Menu', menu)
 
 #----------------------------------------------------------------------------------------------------
 if choice == 'Tổng quan':
 #----------------------------------------------------------------------------------------------------
-    st.subheader('1.Tổng quan')
-    st.write('''**Yêu cầu** : Xây dựng hệ thống hỗ trợ phân loại các phản hồi của khách hàng thành các nhóm : tích cực, tiêu cực trung tính dựa trên dữ liệu dạng văn bản.
+    st.subheader('Tổng quan')
+    # st.write('''**Yêu cầu** :
+    st.write('''
+    - ShopeeFood là một kênh phối hợp với các nhà hàng/quán ăn kinh doanh thực phẩm online.
+    - Từ những đánh giá của khách hàng, vấn đề được đưa ra là làm sao để các nhà hàng/ quán ăn hiểu được khách hàng rõ hơn, biết họ đánh giá về mình như thế nào để cải thiện hơn trong dịch vụ/ sản phẩm
+    - Đánh giá và nhận xét do người mua cho một sản phẩm là một thông tin quan trọng đối với đối tác thương mại điện tử lớn như Shopee. Những đánh giá sản phẩm này giúp người bán hiểu nhu cầu của khách hàng và nhanh chóng điều chỉnh các dịch vụ của mình để mang lại trải nghiệm tốt hơn cho khách hàng trong đơn hàng tiếp theo
     ''')
-    st.write('''**Mục tiêu/ Vấn đề** : Xây dựng mô hình dự đoán giúp người bán hàng có thể biết được những phản hồi nhanh chóng của khách hàng về sản phẩm hay dịch vụ của họ ( tích cực, tiêu cực hay trung tính ), điều này giúp cho người bán biết được tình hình kinh doanh, hiểu được ý kiến của khách hàng từ đó giúp họ cải thiện hơn trong dịch vụ, sản phẩm.
+    st.write('''**Mục tiêu/ Vấn đề** : Xây dựng mô hình dự đoán giúp nhà hàng/ quán ăn có thể biết được những phản hồi nhanh chóng của khách hàng về sản phẩm hay dịch vụ của họ (tích cực, tiêu cực hay trung tính), điều này giúp cho nhà hàng hiểu được tình hình kinh doanh, hiểu được ý kiến của khách hàng từ đó giúp nhà hàng cải thiện hơn trong dịch vụ, sản phẩm.
     ''')
     st.write('''
     **Hướng dẫn chi tiết** :
@@ -200,33 +204,13 @@ if choice == 'Tổng quan':
     st.write('''**Bước 6: Deployment & Feedback/ Act**''')
     st.write('''Đưa ra những cải tiến phù hợp để nâng cao sự hài lòng của khách hàng, thu hút sự chú ý của khách hàng mới''')
     
-    st.write('''
-    Đây là dự án về phân tích cảm xúc của các bình luận của người Việt trên Shopee.
-    Bộ dữ liệu được thu thập từ trang web Shopee (Do Cô cung cấp).
-    Tập dữ liệu chứa 2 cột: xếp hạng và bình luận.
-    Thang đánh giá là từ 1 đến 5.
-    Cột Comment là nhận xét của khách hàng sau khi họ mua hàng trên Shopee.
-    Mục tiêu của dự án này là xây dựng một mô hình để dự đoán cảm xúc của các bình luận.
-    Cảm xúc tích cực hay tiêu cực.
-    ''')
-    st.write('''
-    Bộ dữ liệu có 2 lớp: Tích cực và tiêu cực. 
-    ''')
-    st.write('''
-    Mô hình được xây dựng với Logistic Regression và sử dụng oversampling data:
-    - Mô hình có độ chính xác 87% ( Accuracy ).
-    - Mô hình có độ chính xác 94% ( precision ) cho lớp tích cực ( positive class ).
-    - Mô hình có độ chính xác 85% ( recall ) cho lớp tích cực ( positive class ).
-    - Mô hình có độ chính xác 71% ( precision ) cho lớp tiêu cực ( negative class ).
-    - Mô hình có độ chính xác 87% ( recall ) cho lớp tiêu cực ( negative class ). 
-    ''')
-    st.subheader('2.Giáo viên hướng dẫn')
+    st.subheader('Giáo viên hướng dẫn')
     st.write('''
     **Cô : Khuất Thùy Phương**
     ''')
-    st.subheader('3.Học viên thực hiện')
+    st.subheader('Học viên thực hiện')
     st.write('''
-    **HV : Lê Thống Nhứt - Nguyễn Thị Tường Vy**
+    **HV : Lê Thống Nhứt & Nguyễn Thị Tường Vy**
     ''')
 #----------------------------------------------------------------------------------------------------
 elif choice == 'Xây dựng mô hình':
