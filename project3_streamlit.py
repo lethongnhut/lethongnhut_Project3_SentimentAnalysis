@@ -143,20 +143,20 @@ st.subheader('Sentiment Analysis on ShopeeFood')
 
 # st.video('https://www.youtube.com/watch?v=q3nSSZNOg38&list=PLFTWPHJsZXVVnckL0b3DYmHjjPiRB5mqX')
 
-menu = ['Tổng quan', 'Xây dựng mô hình', 'Dự đoán']
+menu = ['Tổng quan.', 'Xây dựng mô hình.', 'Dự đoán.']
 choice = st.sidebar.selectbox('Menu', menu)
 
 #----------------------------------------------------------------------------------------------------
-if choice == 'Tổng quan':
+if choice == 'Tổng quan.':
 #----------------------------------------------------------------------------------------------------
-    st.subheader('Tổng quan')
+    st.subheader('Tổng quan.')
     # st.write('''**Yêu cầu** :
     st.write('''
     - ShopeeFood là một kênh phối hợp với các nhà hàng/quán ăn kinh doanh thực phẩm online.
     - Từ những đánh giá của khách hàng, vấn đề được đưa ra là làm sao để các nhà hàng/ quán ăn hiểu được khách hàng rõ hơn, biết họ đánh giá về mình như thế nào để cải thiện hơn trong dịch vụ/ sản phẩm
     - Đánh giá và nhận xét do người mua cho một sản phẩm là một thông tin quan trọng đối với đối tác thương mại điện tử lớn như Shopee. Những đánh giá sản phẩm này giúp người bán hiểu nhu cầu của khách hàng và nhanh chóng điều chỉnh các dịch vụ của mình để mang lại trải nghiệm tốt hơn cho khách hàng trong đơn hàng tiếp theo
     ''')
-    st.write('''**Mục tiêu/ Vấn đề** : Xây dựng mô hình dự đoán giúp nhà hàng/ quán ăn có thể biết được những phản hồi nhanh chóng của khách hàng về sản phẩm hay dịch vụ của họ (tích cực, tiêu cực hay trung tính), điều này giúp cho nhà hàng hiểu được tình hình kinh doanh, hiểu được ý kiến của khách hàng từ đó giúp nhà hàng cải thiện hơn trong dịch vụ, sản phẩm.
+    st.write('''**Mục tiêu/ Vấn đề** : Xây dựng mô hình. Dự đoán. giúp nhà hàng/ quán ăn có thể biết được những phản hồi nhanh chóng của khách hàng về sản phẩm hay dịch vụ của họ (tích cực, tiêu cực hay trung tính), điều này giúp cho nhà hàng hiểu được tình hình kinh doanh, hiểu được ý kiến của khách hàng từ đó giúp nhà hàng cải thiện hơn trong dịch vụ, sản phẩm.
     ''')
     st.write('''
     **Hướng dẫn chi tiết** :
@@ -190,7 +190,7 @@ if choice == 'Tổng quan':
     st.write('''**3.Tokenizer văn bản tiếng Việt bằng thư viện underthesea** :''')
     st.write('''**4.Xóa các stopword tiếng Việt** :''')
     st.write('''**Bước 4&5: Modeling & Evaluation/ Analyze & Report**''')
-    st.write('''**Xây dựng các Classification model dự đoán**''')
+    st.write('''**Xây dựng các Classification model Dự đoán.**''')
     
     st.write('''
     - Naïve Bayes\n
@@ -213,9 +213,9 @@ if choice == 'Tổng quan':
     **HV : Lê Thống Nhứt & Nguyễn Thị Tường Vy**
     ''')
 #----------------------------------------------------------------------------------------------------
-elif choice == 'Xây dựng mô hình':
+elif choice == 'Xây dựng mô hình.':
 #----------------------------------------------------------------------------------------------------
-    st.subheader('Xây dựng mô hình')
+    st.subheader('Xây dựng mô hình.')
     st.write('#### Tiền xử lý dữ liệu')
     st.write('##### Hiển thị dữ liệu')
     st.table(df.head())
@@ -271,7 +271,7 @@ elif choice == 'Xây dựng mô hình':
     ax.axis('off')
     st.pyplot(fig)    
 
-    st.write('#### Xây dựng mô hình và đánh giá:')
+    st.write('#### Xây dựng mô hình. và đánh giá:')
     st.write('##### Confusion matrix')
     st.table(cm)
 
@@ -286,18 +286,18 @@ elif choice == 'Xây dựng mô hình':
     # show accuracy as percentage with 2 decimal places
     st.write(f'{accuracy_score(y_test, y_pred) * 100:.2f}%')
 #----------------------------------------------------------------------------------------------------    
-elif choice == 'Dự đoán':
+elif choice == 'Dự đoán.':
 #----------------------------------------------------------------------------------------------------
-    st.subheader('Dự đoán mới')
+    st.subheader('Dự đoán. mới')
     st.write('''
-    Nhập vào một bình luận và mô hình sẽ dự đoán tình cảm của bình luận. 
+    Nhập vào một bình luận và mô hình sẽ Dự đoán. tình cảm của bình luận. 
     ''')
 
     menu = ["Nhập bình luận", "Tải tệp Excel", "Tải tệp CSV"]
     choice = st.selectbox("Menu",menu)
     if choice == "Nhập bình luận":
         comment = st.text_input('Nhập vào một bình luận')
-        if st.button('Dự đoán'):
+        if st.button('Dự đoán.'):
             if comment != '':
                 comment = text_transform(comment)
                 comment = cv.transform([comment])
@@ -374,7 +374,7 @@ elif choice == 'Dự đoán':
                 st.pyplot(fig)
 
                 # download file excel
-                st.subheader("Tải tệp excel kết quả dự đoán: ")
+                st.subheader("Tải tệp excel kết quả Dự đoán.: ")
                 output = io.BytesIO()
                 writer = pd.ExcelWriter(output)
                 df_after_predict.to_excel(writer, sheet_name='Sheet1', index=False)
@@ -451,9 +451,9 @@ elif choice == 'Dự đoán':
                 st.pyplot(fig)
 
                 # download file csv
-                st.subheader("Tải tệp csv kết quả dự đoán: ")
+                st.subheader("Tải tệp csv kết quả Dự đoán.: ")
                 output = io.BytesIO()
                 df_after_predict.to_csv(output, index=False)
                 output.seek(0)
                 st.download_button('Download', data=output, file_name='result_csv.csv', mime='text/csv')
- 
+
