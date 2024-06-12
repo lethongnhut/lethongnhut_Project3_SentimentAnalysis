@@ -395,7 +395,9 @@ elif choice == 'Dự đoán':
 
                 # load data csv
                 df_upload = pd.read_csv(uploaded_file)
-                df_upload.drop('Unnamed: 0', axis=1, inplace=True)
+                #df_upload.drop('Unnamed: 0', axis=1, inplace=True)
+
+                df_upload.drop('ID', axis=1, inplace=True)
 
                 # predict sentiment of review
                 # list result
