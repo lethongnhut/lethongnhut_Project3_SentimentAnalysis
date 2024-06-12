@@ -137,7 +137,7 @@ def text_transform(comment):
 
 st.image('logo_ttth.jpg')
 
-st.title("Trung tâm tin học - ĐH KHTN")
+st.title("Trung tâm tin học -- ĐH KHTN")
 st.header('Data Science')
 st.subheader('Sentiment Analysis on ShopeeFood')
 
