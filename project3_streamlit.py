@@ -1,8 +1,7 @@
 #----------------------------------------------------------------------------------------------------
 #### HV : LÊ THỐNG NHỨT
-#### SN : 19/08/1976
 #### XÂY DỰNG GUI : Project 3 Sentiment Analysis
-#### MÔN HỌC : Data science and machine learning
+#### ĐỒ ÁN TN : Data science 
 #----------------------------------------------------------------------------------------------------
 # import libraries
 import numpy as np
