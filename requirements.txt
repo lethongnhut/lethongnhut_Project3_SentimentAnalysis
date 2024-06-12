@@ -11,4 +11,15 @@ gtts
 pyaudio
 speechrecognition
 maturin
-
+pandas==1.5.3
+numpy==1.24.3
+scikit-learn==1.2.2
+streamlit
+matplotlib
+underthesea
+wordcloud
+openpyxl
+SpeechRecognition
+gTTS
+playsound
+import_ipynb
