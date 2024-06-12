@@ -135,7 +135,7 @@ def text_transform(comment):
 #----------------------------------------------------------------------------------------------------
 # Overview
 
-st.image('download.jpg')
+st.image('logo_ttth.jpg')
 
 st.title("Trung tâm tin học - ĐH KHTN")
 st.header('Data Science')
